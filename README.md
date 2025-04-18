@@ -3,6 +3,8 @@
 
 ![cod-code](https://github.com/user-attachments/assets/026600b7-ea20-4faf-841c-42a81094d04e)
 
+Tested on Ubuntu. Use at own risk.
+
 ## Installation instructions
 
 Make sure you have [Claude Code installed](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
