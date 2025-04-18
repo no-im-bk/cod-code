@@ -9,7 +9,7 @@ Make sure you have [Claude Code installed](https://docs.anthropic.com/en/docs/ag
 
 Download and run install.sh
 
-(This will add cod to ~!~/.local/bin and add prompts to your ~/.claude/CLAUDE.md configuration file)
+(This will add cod to ~/.local/bin and add prompts to your ~/.claude/CLAUDE.md configuration file)
 
 ## How to run
 
