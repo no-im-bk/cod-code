@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import pty, os, sys, re
+
+PUNS = {
+    r"Claude": "Cod"
+}
+
+def fishify(text: str) -> str:
+    for pattern, pun in PUNS.items():
+        text = re.sub(pattern, pun, text)
+    return text
+
+def main():
+    # This callback is called whenever the child writes to the TTY.
+    def read(fd):
+        data = os.read(fd, 1024)
+        if not data:
+            return data
+        try:
+            decoded = data.decode(errors="ignore")
+            fished = fishify(decoded)
+            return fished.encode()
+        except Exception:
+            return data
+
+    # Spawn the real Claude CLI under a pseudo-terminal
+    try:
+        pty.spawn(["claude"] + sys.argv[1:], read)
+    except Exception as e:
+        print(f"Error spawning Claude CLI: {e}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
