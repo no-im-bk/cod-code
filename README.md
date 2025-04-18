@@ -6,7 +6,9 @@
 ## Installation instructions
 
 Make sure you have [Claude Code installed](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
+
 Download and run install.sh
+
 (This will add cod to ~!~/.local/bin and add prompts to your ~/.claude/CLAUDE.md configuration file)
 
 ## How to run
